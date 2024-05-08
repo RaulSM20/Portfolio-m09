@@ -1,0 +1,88 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+    background-image: url(../fondo-hojas-verdes-dibujadas-mano_23-2149133885.avif);
+}
+th{
+    text-align: center;
+    border: 1px solid #000;
+}
+td {
+    text-align: center;
+    border: 1px solid #000;
+}
+.contenedor{
+    margin: 0 auto;
+    max-width: 75%;
+    background-color: aliceblue;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0,0,0,.2);
+    
+}
+.navegacion {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+.navegacion__enlace{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1rem;
+    background-color: #000;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    transition: .3s ease all;
+}
+.header{
+    text-align: center;
+}
+.subtitulo{
+    font-size: 2.7rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.subtitulo__especifico{
+    
+    font-size: 1.9rem;
+    margin-bottom: 5rem;
+}
+.imagen{
+    margin: 0 auto;
+    width: 50%;
+    object-fit: cover;
+    border-radius: 1rem;
+    padding-left: 10rem;
+    margin-top: 5rem;
+}
+.tabla{
+    padding: 2rem;
+
+}
+.celda{
+    border: 1px solid #000;
+    text-align: center;
+}
+.horario{
+text-align: center;
+display: flex;
+flex-direction: column;
+}
+
+.centrar__horario{
+    margin: 0 auto;
+    align-items: center;
+    margin-bottom: 2rem;
+}

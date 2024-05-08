@@ -1,0 +1,19 @@
+.header{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.titulo__principal{
+    border: 2px solid #00F;
+    padding-left: 10px;
+}
+.subtitulo{
+    border: 2px solid #AAA;
+    padding-left: 5px;
+    margin-bottom: 15px;
+}
+.lista{
+    border: solid 2px #0F0;
+}
+.lista li{
+    margin: 15px;
+}

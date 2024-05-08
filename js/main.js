@@ -7,3 +7,9 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
+
+// iframe
+
+function changeIframeSrc(src) {
+    document.getElementById('iframeContent').src = src;
+}

@@ -1,0 +1,40 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+body{
+    font-size: 2rem;
+}
+.header{
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    background-color: bisque;
+}
+.contenedor{
+    display: flex;
+}
+.columnas {
+    height: 65rem;
+    border: 1px solid #ddd;
+    background: #f1f1f1;
+    overflow-y: scroll;
+}
+.mensajes {
+    height: auto;
+}
+.texto {
+    padding:4px;
+    background:#fff;
+}
+
+.footer{
+    margin: 0;
+    text-align: right;
+}
