@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruleta</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <main>
+    <section class="section__ruleta">
+
+        <img src="img/ruleta.png" alt="">
+
+        <div class="container">
+
+        <form id="formulario">
+
+            <select id="tipoApuesta" name="tipoApuesta" onchange="onTipoApuestaChange()">
+                <option disabled selected hidden>Selecciona el tipo de apuesta</option>
+                <option value="sencilla">Sencilla</option>
+                <option value="faltaPasa">Falta/Pasa</option>
+                <option value="parellSenar">Parell/Senar</option>
+                <option value="vermellNegre">Vermell/Negre</option>
+                <option value="dotzena">Dotzena</option>
+                <option value="columna">Columna</option>
+            </select>
+
+            <div>
+                <label for="">cantidad a apostar: €</label>
+                <input type="number" placeholder="apuesta" id="cantidadApuesta" name="cantidadApuesta">
+            </div>
+
+    <!--                                                              -->
+
+            <div id="container__numApuesta" class="tipo__apuesta--container hidden">
+                <label for="">numero a apostar</label>
+                <input name="numeroApuesta" type="number" placeholder="numero a apostar" id="numeroApuesta">
+            </div>
+
+            <div id="container__faltaPasa" class="tipo__apuesta--container hidden">
+                <select name="faltaPasa" id="faltaPasa">
+                    <option value="falta">Falta</option>
+                    <option value="pasa">Pasa</option>
+                </select>
+            </div>
+
+            <div id="container__parellSenar" class="tipo__apuesta--container hidden">
+                <select name="parellSenar" id="parellSenar">
+                    <option value="parell">Parell</option>
+                    <option value="senar">Senar</option>
+                </select>
+            </div>
+
+            <div id="container__vermellNegre" class="tipo__apuesta--container hidden">
+                <select name="vermellNegre" id="vermellNegre">
+                    <option value="vermell">Vermell</option>
+                    <option value="negre">Negre</option>
+                </select>
+            </div>
+
+            <div id="container__dotzena" class="tipo__apuesta--container hidden">
+                <select name="dotzena" id="dotzena">
+                    <option value="1-12">1-12</option>
+                    <option value="13-24">13-24</option>
+                    <option value="25-36">25-36</option>
+                </select>
+            </div>
+            <div id="container__columna" class="tipo__apuesta--container hidden">
+                <select name="columna" id="columna">
+                    <option value="primera">Primera</option>
+                    <option value="segunda">Segunda</option>
+                    <option value="tercera">Tercera</option>
+                </select>
+            </div>
+
+            <div>
+                <button type="submit">Apostar</button>
+            </div>
+
+        </form>
+        <div class="resultadoApuesta">
+            <h2 id="resultadoApuesta"></h2>
+        </div>
+    </div>
+        
+    </section>
+
+    <section class="section__resultados">
+        <div class="resultados">
+            <div class="titulo__resultados">
+                <h2>Resultados</h2>
+            </div>
+            <div class="resultados__historial">
+                <p id="resultado"></p>
+            </div>
+            
+            
+        </div>
+
+        <div class="resultados">
+            <div class="titulo__resultados">
+                <h2>Ultima apuesta</h2>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="main.js"></script>
+</body>
+</html>

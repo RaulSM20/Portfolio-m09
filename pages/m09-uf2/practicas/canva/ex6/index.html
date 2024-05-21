@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<style>
+    body {
+        margin: 3px;
+        padding: 0;
+    }
+    #canvas-ex4 {
+        border: 1px solid black;
+    }
+</style>
+<body>
+
+    <canvas id="canvas-ex6"></canvas>
+    
+    <script>
+        const canvas = document.getElementById('canvas-ex6');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = 500;
+        canvas.height = 500;
+
+            for (let index = 0; index < canvas.width; index+=20) {
+                for (let j = 0; j < canvas.height; j+=20) {
+                    let greyColors = Math.floor(Math.random()*255);
+                    ctx.fillStyle = `rgb(${greyColors},${greyColors},${greyColors})`;
+                    ctx.fillRect(index,j,50,50);
+                }
+            }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex7</title>
+  
+    <script>
+
+        function limita(maximoCaracteres) {
+            let elemento = document.getElementById("texto");
+            let contador = document.getElementById("contador");
+
+            if (elemento.value.length >= maximoCaracteres) {
+                return false;
+            } else {
+                actualizarContador((elemento.value.length + 1), maximoCaracteres);
+                return true;
+            }
+        }
+
+        function actualizarContador(caracteresActuales, maximoCaracteres) {
+            contador = document.getElementById("contador");
+            let caracteresRestantes = maximoCaracteres - caracteresActuales;
+            contador.innerHTML = caracteresRestantes + " caracteres restantes";
+        }
+    </script>
+</head>
+<body>
+    <textarea id="texto" onkeypress="return limita(100);"></textarea>
+    <div id="contador">100 caracteres restantes</div>
+</body>
+</html>

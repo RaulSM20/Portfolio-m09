@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<style>
+    body {
+        margin: 3px;
+        padding: 0;
+    }
+
+    #canvas-ex4 {
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+
+    <canvas id="canvas-ex4"></canvas>
+
+    <script>
+        const canvas = document.getElementById('canvas-ex4');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = 500;
+        canvas.height = 500;
+
+        // flecha
+        ctx.beginPath();
+        for (let i = 0; i < 10; i++) {
+            ctx.moveTo(10 + (10 * i), 10 + (10 * i));
+            ctx.lineTo(20 + (10 * i), 10 + (10 * i));
+        }
+        ctx.stroke();
+
+
+        ctx.beginPath();
+        ctx.moveTo(295, 380);
+
+        for (let i = 0; i < 10; i++) {
+            ctx.lineTo(300 + i * 10, 380 + i * 10);
+            ctx.lineTo(300 + i * 10, 390 + i * 10);
+        }
+        ctx.lineTo(295, 480);
+        
+        ctx.closePath();
+        ctx.stroke();
+
+    </script>
+</body>
+
+</html>

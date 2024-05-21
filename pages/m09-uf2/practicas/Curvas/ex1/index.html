@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<style>
+    body {
+        margin: 3px;
+        padding: 0;
+    }
+
+    #canvas-ex4 {
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+
+    <canvas id="canvas-ex4"></canvas>
+
+    <script>
+        const canvas = document.getElementById('canvas-ex4');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = 500;
+        canvas.height = 500;
+
+        
+        ctx.beginPath();
+        ctx.moveTo(70, 50);
+        ctx.lineTo(150, 50);
+        ctx.lineTo(150, 120);
+        ctx.arc(100,120,50,0,Math.PI*0.5);
+        ctx.lineTo(20, 170);
+        ctx.lineTo(20, 120);
+        ctx.arc(70,100,50,Math.PI,Math.PI* 1.5);
+        ctx.fill()
+        ctx.stroke();
+    </script>
+</body>
+
+</html>

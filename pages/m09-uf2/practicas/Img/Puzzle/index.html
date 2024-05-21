@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<style>
+    body {
+        margin: 3px;
+        padding: 0;
+    }
+
+    #metalSlug {
+        border: 1px solid black;
+    }
+    button {
+        margin-bottom: 20px;
+    }
+</style>
+
+<body>
+
+    <section class="puzzle">
+        <h2>Puzzle</h2>
+        <button id>Play</button>
+    </section>
+    
+    <canvas id="metalSlug"></canvas>
+
+    <script>
+        const canvas = document.getElementById('metalSlug');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = 500;
+        canvas.height = 500;
+
+        let img = new Image();
+        img.src = `./img/poster.jpg`;
+        
+        img.onload = () => {
+            ctx.drawImage(img,0,0,500,500)
+        }
+
+
+    </script>
+</body>
+
+</html>

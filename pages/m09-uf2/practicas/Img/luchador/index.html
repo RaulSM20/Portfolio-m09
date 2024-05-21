@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<style>
+    body {
+        margin: 3px;
+        padding: 0;
+    }
+
+    #luchador {
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+
+    <canvas id="luchador"></canvas>
+
+    <script>
+        const canvas = document.getElementById('luchador');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = 500;
+        canvas.height = 500;
+
+        let img = new Image();
+        let i = 1;
+
+        setInterval(() => {
+            img.src = `./img/Frame${i}.png`;
+            i++;
+            if (i > 7) {
+                i = 1;
+            }
+            img.onload = () => {
+                ctx.clearRect(0, 0, 500, 500);
+                ctx.drawImage(img, 0, 0, 500, 500);
+            }
+                     
+        }, 150);
+        
+
+    </script>
+</body>
+
+</html>

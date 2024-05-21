@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos</title>
+</head>
+
+<body>
+    <div id="video-container">
+        <h2>Video sin poster</h2>
+
+        <video controls>
+            <source src="video/1b76c05b-a0a6-41b6-afa2-77cd99a064a0.mp4">
+            No soporta la reprodruccion de vídeos HTML5.
+        </video>
+
+        <h2>Video con poster</h2>
+
+        <video poster="img/poster.jpg" controls>
+            <source src="video/1b76c05b-a0a6-41b6-afa2-77cd99a064a0.mp4">
+            No soporta la reprodruccion de vídeos HTML5.
+        </video>
+
+        <h2>Video 720p con botones</h2>
+
+        <video id="video-player">
+            <source src="video/720-video.webm" start="10" end="20">
+            No soporta la reprodruccion de vídeos HTML5.
+        </video>
+
+        <p id="pause-count">El vídeo se a pausado <span id="pause-counter">0</span> veces.</p>
+
+        <div id="custom-controls">
+            <button onclick="playPause()">Play/Pause</button>
+            <button onclick="stop()">Stop</button>
+            <button onclick="skip(5)">Skip 5s</button>
+            <button onclick="skip(-5)">Back 5s</button>
+            <input type="range" id="volume-control" min="0" max="10" step="0.1" value="1" onchange="setVolume(this.value)">
+        </div>
+
+        <h2>Video 320p</h2>
+        <video controls>
+            <source src="video/320-video.webm">
+            No soporta la reprodruccion de vídeos HTML5.
+        </video>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

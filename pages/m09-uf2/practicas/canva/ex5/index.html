@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<style>
+    body {
+        margin: 3px;
+        padding: 0;
+    }
+
+    #canvas-ex4 {
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+
+    <canvas id="canvas-ex5"></canvas>
+
+    <script>
+        const canvas = document.getElementById('canvas-ex5');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = 500;
+        canvas.height = 500;
+        console.log(canvas.length);
+
+        setInterval(() => {
+            for (let index = 0; index < canvas.width; index += 20) {
+                for (let j = 0; j < canvas.height; j += 20) {
+                    let colors = Math.floor(Math.random() * 16777215).toString(16);
+                    ctx.fillStyle = `#${colors}`;
+                    ctx.fillRect(index, j, 50, 50);
+                }
+            }
+        }, 500);
+
+
+
+    </script>
+</body>
+
+</html>

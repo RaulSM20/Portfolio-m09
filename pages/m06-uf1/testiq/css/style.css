@@ -1,0 +1,133 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,*:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    line-height:2 ;
+
+}
+header {
+    display: flex;
+    width: 30%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    border-radius: 0% 0% 50% 50%;
+}
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+button{
+    background-color: #000000;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    color: #fff;
+
+}
+button:hover{
+    background-color: #fff;
+    transition: 0.5s;
+    color: #000;
+}
+button:hover a{
+    color: #000;
+    transition: 0.5s;
+
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5rem;
+}
+.container__preguntas{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    padding: 4rem;
+}
+.container__respuestas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid red;
+    padding: 4rem;
+    width: 40%;
+}
+.nav{
+    display: flex;
+    flex-direction: column;
+}
+.titulo__inicio {
+    display: flex;
+    font-size: 2rem;
+    color: #fff;
+    margin-top: 2rem;
+}
+.container__respuestas--opcion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+.pregunta{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    background-color: #fff;
+}
+
+.pregunta.activa{
+    display: flex;
+}
+.boton__siguiente{
+    margin-top: 10rem;
+}
+.hidden {
+    display: none;
+}
+
+input[type="button"] {
+    background-color: #000000;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    color: #fff;
+}
+input[type="button"].selected{
+    background-color: #fff;
+    color: #000;
+}
+#resultado__cuestionario{
+
+    margin: 0 auto;
+    border-radius: 2rem;
+    background-color: rgb(255, 238, 218);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10rem;
+    padding: 10rem;
+    width: 30%;
+    
+}
+#resultado__cuestionario button {
+    width: 20rem;
+}

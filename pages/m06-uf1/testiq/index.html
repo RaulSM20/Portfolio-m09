@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test IQ</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="titutlo__inicio">Test IQ</h1>
+    </header>
+
+    <main>
+
+        <section id="resultado__cuestionario" class="hidden">
+            <p>Has acertado <span id="num__aciertos"></span> preguntas</p>
+
+            <button onclick="reiniciarTest()"><a href="javascript:location.reload()">Reiniciar Test</a></button>
+        </section>
+        
+        <section class="container" id="cuestionario">
+            <div class="container__preguntas">
+            <nav class="nav">
+                <button onclick="mostrarPregunta('0')">Inicio</button>
+                <button onclick="mostrarPregunta('1')">Pregunta 1</button>
+                <button onclick="mostrarPregunta('2')">Pregunta 2</button>
+                <button onclick="mostrarPregunta('3')">Pregunta 3</button>
+                <button onclick="mostrarPregunta('4')">Pregunta 4</button>
+                <button onclick="mostrarPregunta('5')">Pregunta 5</button>
+                <button onclick="mostrarPregunta('6')">Pregunta 6</button>
+                <button onclick="mostrarPregunta('7')">Pregunta 7</button>
+                <button onclick="mostrarPregunta('8')">Pregunta 8</button>
+                <button onclick="mostrarPregunta('9')">Pregunta 9</button>
+                <button onclick="mostrarPregunta('10')">Pregunta 10</button>
+                <button onclick="mostrarPregunta('11')">Pregunta 11</button>
+            </nav>
+            </div>
+
+            <div class="container__respuestas">
+
+                <div class="pregunta activa" id="pregunta__0">
+                    <h2><strong>Inicio</strong></h2>
+                    <p>Empezar tu Test de IQ</p>
+                </div>
+
+                <div class="pregunta" id="pregunta__1">
+                    <h2>Pregunta 1</h2>
+                    <p> - Indica cual es la roja</p>
+
+                    <div class="container__respuestas--opcion">
+                        <input onclick="guardarRespuesta(1, 1, 'verde')" class="respuesta__1" type="button" name="respuesta"  value="Verde" >
+                        <input onclick="guardarRespuesta(1, 2, 'rojo')" class="respuesta__2" type="button" name="respuesta" value="Rojo" >
+                        <input onclick="guardarRespuesta(1, 3, 'amarillo')" class="respuesta__3" type="button" name="respuesta"  value="Amarillo">
+                        <input onclick="guardarRespuesta(1, 4, 'azul')" class="respuesta__4" type="button" name="respuesta"  value="Azul">
+                    </div>
+                     
+
+                    <button onclick="siguientePregunta()" class="boton__siguiente" type="submit">Siguiente pregunta</button>
+
+                </div>
+                <div class="pregunta" id="pregunta__2">
+                    <h2>Pregunta 2</h2>
+                    <p> - 1,3,5,7...</p>
+
+                    <div class="container__respuestas--opcion">
+                        <input onclick="guardarRespuesta(2, 1, '7')" class="respuesta__1" type="button" name="respuesta"  value="7" >
+                        <input onclick="guardarRespuesta(2, 2, '8')"  class="respuesta__2" type="button" name="respuesta" value="8" >
+                        <input onclick="guardarRespuesta(2, 3, '9')"  class="respuesta__3" type="button" name="respuesta"  value="9" >
+                        <input onclick="guardarRespuesta(2, 4, '10')" class="respuesta__4" type="button" name="respuesta"  value="10" >
+                    </div>
+                      
+  
+                    
+                    <button onclick="siguientePregunta()" class="boton__siguiente" type="submit">Siguiente pregunta</button>
+                    <button onclick="anteriorPregunta()" class="boton__anterior" type="submit">Pregunta anterior</button>
+
+                </div>
+                <div class="pregunta" id="pregunta__3">
+                    <h2>Pregunta 3</h2>
+                    <p> - A es a C lo que 1 es a...</p>
+
+                    <div class="container__respuestas--opcion">
+                        <input onclick="guardarRespuesta(3, 1, '1')" class="respuesta__1" type="button" name="respuesta"  value="1">
+                        <input onclick="guardarRespuesta(3, 2, '2')" class="respuesta__2" type="button" name="respuesta" value="2" >
+                        <input onclick="guardarRespuesta(3, 3, '3')" class="respuesta__3" type="button" name="respuesta"  value="3" >
+                        <input onclick="guardarRespuesta(3, 4, '4')" class="respuesta__4" type="button" name="respuesta"  value="4" >
+                    </div>
+                      
+                    
+                    <button onclick="siguientePregunta()" class="boton__siguiente" type="submit">Siguiente pregunta</button>
+                    <button onclick="anteriorPregunta()" class="boton__anterior" type="submit">Pregunta anterior</button>
+
+                </div>
+                <div class="pregunta" id="pregunta__4">
+                    <h2>Pregunta 4</h2>
+                    <img src="img/p4.jpg" alt="imagen">
+
+                    <div class="container__respuestas--opcion">
+                        <input onclick="guardarRespuesta(4, 1, 'a')" class="respuesta__1" type="button" name="respuesta"  value="a">
+                        <input onclick="guardarRespuesta(4, 2, 'b')" class="respuesta__2" type="button" name="respuesta" value="b">
+                        <input onclick="guardarRespuesta(4, 3, 'c')"  class="respuesta__3" type="button" name="respuesta"  value="c">
+                        <input onclick="guardarRespuesta(4, 4, 'd')"  class="respuesta__4" type="button" name="respuesta"  value="d">
+                    </div>
+                    
+                    <button onclick="siguientePregunta()" class="boton__siguiente" type="submit">Siguiente pregunta</button>
+                    <button onclick="anteriorPregunta()" class="boton__anterior" type="submit">Pregunta anterior</button>
+
+                </div>
+                <div class="pregunta" id="pregunta__5">
+                    <h2>Pregunta 5</h2>
+                    <p> - Si tienes dos monedas y Maria tiene cuatro monedas mas que tu. ¿Cuantas monedas tienen en total?</p>
+
+                    <div class="container__respuestas--opcion">
+                        <input onclick="guardarRespuesta(5, 1, '4')" class="respuesta__1" type="button" name="respuesta"  value="4">
+                        <input onclick="guardarRespuesta(5, 2, '6')" class="respuesta__2" type="button" name="respuesta" value="6">
+                        <input onclick="guardarRespuesta(5, 3, '8')" class="respuesta__3"type="button" name="respuesta"  value="8">
+                        <input onclick="guardarRespuesta(5, 4, '10')"class="respuesta__4" type="button" name="respuesta"  value="10">
+                    </div>
+                    
+                    <button onclick="siguientePregunta()" class="boton__siguiente" type="submit">Siguiente pregunta</button>
+                    <button onclick="anteriorPregunta()" class="boton__anterior" type="submit">Pregunta anterior</button>
+
+                </div>
+                <div class="pregunta" id="pregunta__6">
+                    <h2>Pregunta 6</h2>
+                    <p> - 66 es a 33 como DD es a...</p>
+
+                    <div class="container__respuestas--opcion">
+                        <input onclick="guardarRespuesta(6, 1, 'aa')" class="respuesta__1" type="button" name="respuesta"  value="AA">
+                        <input onclick="guardarRespuesta(6, 2, 'bb')" class="respuesta__2" type="button" name="respuesta" value="BB">
+                        <input onclick="guardarRespuesta(6, 3, 'dd')" class="respuesta__3" type="button" name="respuesta"  value="DD">
+                        <input onclick="guardarRespuesta(6, 4, '11')" class="respuesta__4" type="button" name="respuesta"  value="11">
+                    </div>
+                    
+                    <button onclick="siguientePregunta()" class="boton__siguiente" type="submit">Siguiente pregunta</button>
+                    <button onclick="anteriorPregunta()" class="boton__anterior" type="submit">Pregunta anterior</button>
+
+                </div>
+                <div class="pregunta" id="pregunta__7">
+                    <h2>Pregunta 7</h2>
+                    <p> - Nemo es Omen como Rama es a ...</p>
+
+                    <div class="container__respuestas--opcion">
+                        <input onclick="guardarRespuesta(7, 1, 'asar')" class="respuesta__1" type="button" name="respuesta"  value="Asar">
+                        <input onclick="guardarRespuesta(7, 2, 'amar')" class="respuesta__2" type="button" name="respuesta" value="Amar">
+                        <input onclick="guardarRespuesta(7, 3, 'arma')" class="respuesta__3" type="button" name="respuesta"  value="Arma">
+                        <input onclick="guardarRespuesta(7, 4, 'hoja')" class="respuesta__4" type="button" name="respuesta"  value="Hoja">
+                    </div>
+                    
+                    <button onclick="siguientePregunta()" class="boton__siguiente" type="submit">Siguiente pregunta</button>
+                    <button onclick="anteriorPregunta()" class="boton__anterior" type="submit">Pregunta anterior</button>
+
+                </div>
+                <div class="pregunta" id="pregunta__8">
+                    <h2>Pregunta 8</h2>
+                    <p> - 1,4,9,16,25...</p>
+
+                    <div class="container__respuestas--opcion">
+                        <input onclick="guardarRespuesta(8, 1, '31')" class="respuesta__1" type="button" name="respuesta"  value="31">
+                        <input onclick="guardarRespuesta(8, 2, '32')" class="respuesta__2" type="button" name="respuesta" value="32">
+                        <input onclick="guardarRespuesta(8, 3, '35')" class="respuesta__3" type="button" name="respuesta"  value="35">
+                        <input onclick="guardarRespuesta(8, 4, '36')" class="respuesta__4" type="button" name="respuesta"  value="36">
+                    </div>
+                    
+                    <button onclick="siguientePregunta()" class="boton__siguiente" type="submit">Siguiente pregunta</button>
+                    <button onclick="anteriorPregunta()" class="boton__anterior" type="submit">Pregunta anterior</button>
+
+                </div>
+                <div class="pregunta" id="pregunta__9">
+                    <h2>Pregunta 9</h2>
+                    <img src="img/p9.jpg" alt="imagen">
+
+                    <div class="container__respuestas--opcion">
+                        <input onclick="guardarRespuesta(9, 1, 'a')" class="respuesta__1" type="button" name="respuesta"  value="a">
+                        <input onclick="guardarRespuesta(9, 2, 'b')" class="respuesta__2" type="button" name="respuesta" value="b">
+                        <input onclick="guardarRespuesta(9, 3, 'c')" class="respuesta__3" type="button" name="respuesta"  value="c">
+                        <input onclick="guardarRespuesta(9, 4, 'd')" class="respuesta__4" type="button" name="respuesta"  value="d">
+                    </div>
+                    
+                    <button onclick="siguientePregunta()" class="boton__siguiente" type="submit">Siguiente pregunta</button>
+                    <button onclick="anteriorPregunta()" class="boton__anterior" type="submit">Pregunta anterior</button>
+
+                </div>
+                <div class="pregunta" id="pregunta__10">
+                    <h2>Pregunta 10</h2>
+                    <p> - 6+2 = 26 como 3 + 7 es igual a...</p>
+
+                    <div class="container__respuestas--opcion">
+                        <input onclick="guardarRespuesta(10, 1, '17')" class="respuesta__1" type="button" name="respuesta"  value="17">
+                        <input onclick="guardarRespuesta(10, 2, '39')" class="respuesta__2" type="button" name="respuesta" value="39">
+                        <input onclick="guardarRespuesta(10, 3, '73')" class="respuesta__3" type="button" name="respuesta"  value="73">
+                        <input onclick="guardarRespuesta(10, 4, '79')" class="respuesta__4" type="button" name="respuesta"  value="79">
+                    </div>
+                    <button onclick="siguientePregunta()" class="boton__siguiente" type="submit">Siguiente pregunta</button>
+                    <button onclick="anteriorPregunta()" class="boton__anterior" type="submit">Pregunta anterior</button>
+
+                </div>
+                <div class="pregunta" id="pregunta__11">
+                    <h2>Pregunta 11</h2>
+                    <p> - Cuchara es Comida como Hacha es a ...</p>
+
+                    <div class="container__respuestas--opcion">
+                        <input onclick="guardarRespuesta(11, 1, 'piedra')" class="respuesta__1" type="button" name="respuesta"  value="Piedra">
+                        <input onclick="guardarRespuesta(11, 2, 'madera')" class="respuesta__2" type="button" name="respuesta" value="Madera">
+                        <input onclick="guardarRespuesta(11, 3, 'diamante')" class="respuesta__3" type="button" name="respuesta"  value="Diamante">
+                        <input onclick="guardarRespuesta(11, 4, 'hombre')" class="respuesta__4" type="button" name="respuesta"  value="Hombre">
+                    </div>
+                    
+                    <button onclick="finalizarTest()" class="boton__finalizar" type="submit">Finalizar Test</button>
+                    <button onclick="anteriorPregunta()" class="boton__anterior" type="submit">Pregunta anterior</button>
+
+                </div>
+        </section>
+
+        
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

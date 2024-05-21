@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(160, 194, 179);
+}
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.tablero {
+border: 1px solid #fff;
+width: 25%;
+padding: 10px;
+margin: 0 auto;
+margin-top: 30px;
+}
+.circulo {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+   
+}
+.container {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.container button {
+    width: 50px;
+    height: 20px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.container__derecha{
+    display: flex;
+    flex-wrap: wrap;
+    width: 40px;
+}
+.circuloLateral {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.colores{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+.orange{
+    background-color: orange;
+}
+.green{
+    background-color: green;
+}
+.brown{
+    background-color: brown;
+}
+.black{
+    background-color: black;
+}
+.boton {
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .boton:hover {
+    background-color: rgb(202, 184, 26);
+  }
+  
+  .boton:active {
+    background-color: #3e8e41;
+  }  

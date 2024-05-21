@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Ejercicio 15 - Informaci�n sobre eventos</title>
+
+<style type="text/css">
+body {font-family: arial, helvetica;}
+#info {width:160px; border:thin solid silver; padding:.5em; position:fixed;}
+#info h1 {margin: 0;}
+</style>
+
+<script type="text/javascript">
+function muestraInformacion(mensaje , color) {
+    let info = document.getElementById("info");
+    document.getElementById("info").innerHTML = '<h1>'+mensaje[0]+'</h1>';
+    for(let i=1; i<mensaje.length; i++) {
+        document.getElementById("info").innerHTML += '<p>'+mensaje[i]+'</p>';
+    }
+
+    info.style.backgroundColor = color;
+}
+
+        function movimientoRaton(event) {
+            let navegadorX = event.clientX; 
+            let navegadorY = event.clientY;
+            let paginaX = event.pageX;
+            let paginaY = event.pageY;
+
+            let mensaje = [
+                "Info raton",
+                "posicion del raton respecto a la posicion X del navegador=" + navegadorX + ", Y=" + navegadorY, 
+                "posicion del raton respecto a la posicion X de la pagina=" + paginaX + ", Y=" + paginaY
+            ];
+
+            muestraInformacion(mensaje, 'white');
+        }
+        function pulsarTecla(event) {
+            let teclaPulsada = event.key;
+            let mensaje = [
+                "Info teclado",
+                "Tecla pulsada: " + teclaPulsada
+            ];
+
+            muestraInformacion(mensaje, '#CCE6FF');
+        }
+        function clicarRaton(event) {
+            let mensaje = [
+                "Info click raton",
+            ];
+
+            muestraInformacion(mensaje, '#FFFFCC');
+        }
+
+        document.addEventListener("mousemove", movimientoRaton);
+        document.addEventListener("keydown", pulsarTecla);
+        document.addEventListener("click", clicarRaton);
+</script>
+</head>
+
+<body>
+
+<div id="info"></div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+</body></html>

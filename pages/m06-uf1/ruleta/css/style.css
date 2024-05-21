@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(47, 182, 137);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.imagen__ruleta {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.formulario__apuesta{
+    display: flex;
+    gap: 25px;
+}
+.historial {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    border: 1px solid black;
+    width: 30%;
+    text-align: center;
+}
+.historial__titulo {
+    border-bottom: 1px solid black;
+}
+.activa {
+    display: flex;
+}
+.activa.none{
+    display: none;
+}

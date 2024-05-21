@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<style>
+    body {
+        margin: 3px;
+        padding: 0;
+    }
+
+    #canvas-ex4 {
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+
+    <canvas id="canvas-ex4"></canvas>
+
+    <script>
+        const canvas = document.getElementById('canvas-ex4');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = 500;
+        canvas.height = 500;
+
+        // flecha
+        ctx.beginPath();
+        ctx.moveTo(30, 80);
+        ctx.lineTo(30, 40);
+        ctx.lineTo(10, 40);
+        ctx.lineTo(35, 20);
+        ctx.lineTo(60, 40);
+        ctx.lineTo(40, 40);
+        ctx.lineTo(40, 80);
+        ctx.closePath();
+        ctx.stroke();
+
+        ctx.fillStyle = 'red'
+        ctx.fill()
+        
+        ctx.beginPath();
+        ctx.moveTo(130, 80);
+        ctx.lineTo(80, 130);
+        ctx.lineTo(130, 180);
+        ctx.closePath();
+        ctx.stroke();
+
+        ctx.fillStyle = 'orange'
+        ctx.fill()
+
+        // flecha
+        ctx.beginPath();
+        ctx.moveTo(300, 80);
+        ctx.lineTo(300, 40);
+        ctx.lineTo(280, 40);
+        ctx.lineTo(305, 20);
+        ctx.lineTo(330, 40);
+        ctx.lineTo(310, 40);
+        ctx.lineTo(310, 80);
+        ctx.closePath();
+        ctx.strokeStyle = 'orange'
+        ctx.lineWidth = 2
+        ctx.stroke();
+
+        
+        ctx.beginPath();
+        ctx.moveTo(330, 80);
+        ctx.lineTo(280, 130);
+        ctx.lineTo(330, 180);
+        ctx.closePath();
+        ctx.strokeStyle = 'orange'
+        ctx.stroke();
+
+
+    </script>
+</body>
+
+</html>

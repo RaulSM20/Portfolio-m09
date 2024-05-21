@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<style>
+    body {
+        margin: 3px;
+        padding: 0;
+    }
+    #canvas-ex7 {
+        border: 4px solid black;
+    }
+</style>
+<body>
+
+    <canvas id="canvas-ex7"></canvas>
+    
+    <script>
+        const canvas = document.getElementById('canvas-ex7');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = 400;
+        canvas.height = 400;
+        console.log(canvas.length);
+
+            for (let index = 0; index < canvas.width; index+=20) {
+                let greyColors = Math.floor(Math.random()*255);
+                ctx.fillStyle = `rgb(${greyColors},${greyColors},${greyColors})`;
+                ctx.fillRect(index,0,20,canvas.height);
+            }
+        
+    </script>
+</body>
+</html>

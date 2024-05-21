@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<style>
+    body {
+        margin: 3px;
+        padding: 0;
+    }
+
+    #canvas-ex4 {
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+
+    <canvas id="canvas-ex4"></canvas>
+
+    <script>
+        const canvas = document.getElementById('canvas-ex4');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = 500;
+        canvas.height = 500;
+
+
+        // abajo derecha
+        for (let i = 0; i < 50; i++) {
+            ctx.beginPath();
+            ctx.moveTo(500, 250);
+            ctx.lineTo(750 - (i * 10), 500);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(250, 500);
+            ctx.lineTo(500, 750 - (i * 10));
+            ctx.stroke();
+        }
+
+        //abajo izquierda
+        for (let i = 0; i < 50; i++) {
+            ctx.beginPath();
+            ctx.moveTo(0, 250);
+            ctx.lineTo(250 - (i * 10), 500);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(250, 500);
+            ctx.lineTo(0, 750 - (i * 10));
+            ctx.stroke();
+        }
+
+        //ariba derecha
+        for (let i = 0; i < 50; i++) {
+            ctx.beginPath();
+            ctx.moveTo(500, 250);
+            ctx.lineTo(250 + (i * 10), 0);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(250, 0);
+            ctx.lineTo(750, 0 + (i * 10));
+            ctx.stroke();
+        }
+        // arriba izquierda
+        for (let i = 0; i < 50; i++) {
+            ctx.beginPath();
+            ctx.moveTo(0, 250 - (i * 10));
+            ctx.lineTo(250, 0);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(0, 250);
+            ctx.lineTo(250 - (i * 10), 0);
+            ctx.stroke();
+
+        }
+
+
+    </script>
+</body>
+
+</html>

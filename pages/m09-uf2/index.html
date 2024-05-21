@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Raul Sandez Martinez</title>
+        <link rel="stylesheet" href="../../css/style.css">
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <!-- Leaflet CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+        <!-- Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+          rel="stylesheet">
+    
+    </head>
+<body>
+     <!-- NavBar -->
+     <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container-fluid">
+             
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarContent"
+                aria-controls="navbarContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="container px-3">
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link me-lg-3">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../../#about" class="nav-link me-lg-3">Sobre mi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../../#projects" class="nav-link me-lg-3">Proyectos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../../#contact" class="nav-link me-lg-3">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- end Navbar -->
+    <header>
+        <a href="../../projects.html" class="ms-5 my-5 text-secondary">Go back</a>
+    
+        <h1 class="text-center my-5">M09-UF2 Projects</h1>
+    </header>
+
+    <!-- Modal -->
+    <div class="modal fade" id="iframeModal" tabindex="-1" aria-labelledby="iframeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="iframeModalLabel">Contenido del Iframe</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <iframe id="iframeContent" src="" width="1024" height="800" frameborder="0"></iframe>
+            </div>
+        </div>
+        </div>
+    </div>
+  
+
+    <!-- Gallery -->
+<div class="row justify-content-center">
+    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+      <img
+        src="images/video.png"
+        class="w-100 shadow-1-strong rounded mb-4 border p-3"
+        alt="Boat on Calm Water"
+        data-bs-toggle="modal"
+        data-bs-target="#iframeModal"
+        onclick="changeIframeSrc('../m09-uf2/practicas/ex1/index.html')"
+      />
+  
+      <img
+        src="images/pr1.png"
+        class="w-100 shadow-1-strong rounded mb-4 border p-3"
+        alt="Wintry Mountain Landscape"
+        data-bs-toggle="modal"
+        data-bs-target="#iframeModal"
+        onclick="changeIframeSrc('../m09-uf2/practicas/canva/ex1/ex1.html')"
+      />
+              
+      <img
+      src="images/pr8.png"
+      class="w-100 shadow-1-strong rounded mb-4 border p-3"
+      alt="Boat on Calm Water"
+      data-bs-toggle="modal"
+      data-bs-target="#iframeModal"
+      onclick="changeIframeSrc('../m09-uf2/practicas/canva/ex8/index.html')"
+    />
+    <img
+      src="images/pr9.png"
+      class="w-100 shadow-1-strong rounded mb-4 border p-3"
+      alt="Boat on Calm Water"
+      data-bs-toggle="modal"
+      data-bs-target="#iframeModal"
+      onclick="changeIframeSrc('../m09-uf2/practicas/caminos rectos/ex1/index.html')"
+    />
+    <img
+      src="images/pr10.png"
+      class="w-100 shadow-1-strong rounded mb-4 border p-3"
+      alt="Boat on Calm Water"
+      data-bs-toggle="modal"
+      data-bs-target="#iframeModal"
+      onclick="changeIframeSrc('../m09-uf2/practicas/caminos rectos/ex2/index.html')"
+    />
+    <img
+      src="images/pr16.png"
+      class="w-100 shadow-1-strong rounded mb-4 border p-3"
+      alt="Boat on Calm Water"
+      data-bs-toggle="modal"
+      data-bs-target="#iframeModal"
+      onclick="changeIframeSrc('../m09-uf2/practicas/Curvas/ex2/index.html')"
+    />
+    <img
+            src="images/pr14.png"
+            class="w-100 shadow-1-strong rounded mb-4 border p-3"
+            alt="Boat on Calm Water"
+            data-bs-toggle="modal"
+            data-bs-target="#iframeModal"
+            onclick="changeIframeSrc('../m09-uf2/practicas/caminos rectos/ex8/index.html')"
+        />
+        
+    </div>
+    <div class="col-lg-4 mb-4 mb-lg-0">
+        <img
+        src="images/pr2.png"
+        class="w-100 shadow-1-strong rounded mb-4 border p-3"
+        alt="Wintry Mountain Landscape"
+        data-bs-toggle="modal"
+        data-bs-target="#iframeModal"
+        onclick="changeIframeSrc('../m09-uf2/practicas/canva/ex2/ex2.html')"
+      />
+      <img
+        src="images/pe3.png"
+        class="w-100 shadow-1-strong rounded mb-4 border p-3"
+        alt="Wintry Mountain Landscape"
+        data-bs-toggle="modal"
+        data-bs-target="#iframeModal"
+        onclick="changeIframeSrc('../m09-uf2/practicas/canva/ex3/ex3.html')"
+      />
+      <img
+          src="images/pr7.png"
+          class="w-100 shadow-1-strong rounded mb-4 border p-3"
+          alt="Boat on Calm Water"
+          data-bs-toggle="modal"
+          data-bs-target="#iframeModal"
+          onclick="changeIframeSrc('../m09-uf2/practicas/canva/ex7/index.html')"
+        />
+        <img
+            src="images/pr11.png"
+            class="w-100 shadow-1-strong rounded mb-4 border p-3"
+            alt="Boat on Calm Water"
+            data-bs-toggle="modal"
+            data-bs-target="#iframeModal"
+            onclick="changeIframeSrc('../m09-uf2/practicas/caminos rectos/ex3/index.html')"
+        />
+        <img
+            src="images/pr12.png"
+            class="w-100 shadow-1-strong rounded mb-4 border p-3"
+            alt="Boat on Calm Water"
+            data-bs-toggle="modal"
+            data-bs-target="#iframeModal"
+            onclick="changeIframeSrc('../m09-uf2/practicas/caminos rectos/ex6/index.html')"
+        />
+        <img
+            src="images/pr17.png"
+            class="w-100 shadow-1-strong rounded mb-4 border p-3"
+            alt="Boat on Calm Water"
+            data-bs-toggle="modal"
+            data-bs-target="#iframeModal"
+            onclick="changeIframeSrc('../m09-uf2/practicas/Curvas/ex3/index.html')"
+        />
+        <img
+          src="images/pr20.png"
+          class="w-100 shadow-1-strong rounded mb-4 border p-3"
+          alt="Boat on Calm Water"
+          data-bs-toggle="modal"
+          data-bs-target="#iframeModal"
+          onclick="changeIframeSrc('../m09-uf2/practicas/Img/Metal Slug/index.html')"
+        />
+    </div>
+    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+        
+        <img
+          src="images/pr5.png"
+          class="w-100 shadow-1-strong rounded mb-4 border p-3"
+          alt="Boat on Calm Water"
+          data-bs-toggle="modal"
+          data-bs-target="#iframeModal"
+          onclick="changeIframeSrc('../m09-uf2/practicas/canva/ex5/index.html')"
+        />
+        <img
+          src="images/pr6.png"
+          class="w-100 shadow-1-strong rounded mb-4 border p-3"
+          alt="Boat on Calm Water"
+          data-bs-toggle="modal"
+          data-bs-target="#iframeModal"
+          onclick="changeIframeSrc('../m09-uf2/practicas/canva/ex6/index.html')"
+        />
+        <img
+            src="images/pr13.png"
+            class="w-100 shadow-1-strong rounded mb-4 border p-3"
+            alt="Boat on Calm Water"
+            data-bs-toggle="modal"
+            data-bs-target="#iframeModal"
+            onclick="changeIframeSrc('../m09-uf2/practicas/caminos rectos/ex7/index.html')"
+        />
+        <img
+            src="images/pr18.png"
+            class="w-100 shadow-1-strong rounded mb-4 border p-3"
+            alt="Boat on Calm Water"
+            data-bs-toggle="modal"
+            data-bs-target="#iframeModal"
+            onclick="changeIframeSrc('../m09-uf2/practicas/Curvas/ex4/index.html')"
+        />
+        <img
+        src="images/pr19.png"
+        class="w-100 shadow-1-strong rounded mb-4 border p-3"
+        alt="Boat on Calm Water"
+        data-bs-toggle="modal"
+        data-bs-target="#iframeModal"
+        onclick="changeIframeSrc('../m09-uf2/practicas/Img/luchador/index.html')"
+      />
+      <img
+          src="images/pr21.png"
+          class="w-100 shadow-1-strong rounded mb-4 border p-3"
+          alt="Boat on Calm Water"
+          data-bs-toggle="modal"
+          data-bs-target="#iframeModal"
+          onclick="changeIframeSrc('../m09-uf2/practicas/Img/Puzzle/index.html')"
+        />
+      </div>
+        
+  </div>
+  <!-- Gallery -->
+
+    
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Script -->
+    <script src="../../js/main.js"></script>
+</body>
+</html>

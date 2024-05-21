@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Mind</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="colores">
+        <div class="circulo red"></div>
+        <div class="circulo blue"></div>
+        <div class="circulo green"></div>
+        <div class="circulo orange"></div>
+        <div class="circulo brown"></div>
+        <div class="circulo black"></div>
+    </div>
+    
+    <section class="tablero">
+    <div id="fila_1" class="container" >
+        <div class="circulo" id="circulo_1_1" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_1_2" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_1_3" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_1_4" onclick="changeColor(event)"></div>
+        <div class="container__derecha">
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+        </div>
+
+    </div>
+
+    <div id="fila_2" class="container">
+        <div class="circulo" id="circulo_2_1" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_2_2" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_2_3" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_2_4" onclick="changeColor(event)"></div>
+        <div class="container__derecha">
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+        </div>
+
+    </div>
+    <div id="fila_3" class="container">
+        <div class="circulo" id="circulo_3_1" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_3_2" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_3_3" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_3_4" onclick="changeColor(event)"></div>
+        <div class="container__derecha">
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+        </div>
+
+    </div>
+    <div id="fila_4" class="container">
+        <div class="circulo" id="circulo_4_1" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_4_2" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_4_3" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_4_4" onclick="changeColor(event)"></div>
+        <div class="container__derecha">
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+        </div>
+
+    </div>
+    <div id="fila_5" class="container">
+        <div class="circulo" id="circulo_5_1" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_5_2" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_5_3" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_5_4" onclick="changeColor(event)"></div>
+        <div class="container__derecha">
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+        </div>
+
+    </div>
+    <div id="fila_6" class="container">
+        <div class="circulo" id="circulo_6_1" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_6_2" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_6_3" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_6_4" onclick="changeColor(event)"></div>
+        <div class="container__derecha">
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+        </div>
+
+    </div>
+    <div id="fila_7" class="container">
+        <div class="circulo" id="circulo_7_1" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_7_2" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_7_3" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_7_4" onclick="changeColor(event)"></div>
+        <div class="container__derecha">
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+        </div>
+
+    </div>
+
+    <div id="fila_8" class="container">
+        <div class="circulo" id="circulo_8_1" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_8_2" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_8_3" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_8_4" onclick="changeColor(event)"></div>
+        <div class="container__derecha">
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+        </div>
+
+    </div>
+    <div id="fila_9" class="container">
+        <div class="circulo" id="circulo_9_1" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_9_2" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_9_3" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_9_4" onclick="changeColor(event)"></div>
+        <div class="container__derecha">
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+        </div>
+
+    </div>
+    <div id="fila_10" class="container">
+        <div class="circulo" id="circulo_10_1" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_10_2" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_10_3" onclick="changeColor(event)"></div>
+        <div class="circulo" id="circulo_10_4" onclick="changeColor(event)"></div>
+        <div class="container__derecha">
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+            <div class="circuloLateral"></div>
+        </div>
+
+    </div>
+
+    <div class="flex-center" >
+        <button class="boton" onclick="submit()">Check</button>
+    </div>
+    </section>
+
+    <div class="colores" id="secuencia-ganadora">
+        <div class="circulo" id="secuencia-ganadora-1"></div>
+        <div class="circulo" id="secuencia-ganadora-2"></div>
+        <div class="circulo" id="secuencia-ganadora-3"></div>
+        <div class="circulo" id="secuencia-ganadora-4"></div>
+
+    </div>
+
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
